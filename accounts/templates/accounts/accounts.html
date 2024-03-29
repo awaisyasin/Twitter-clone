@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href={% static "accounts/css/accounts.css" %}>
+{% endblock %}
+{% block title %}Accounts{% endblock title %}
+
+{% block content %}
+    <div class="account-container">
+        <img class="twitter-banner" src={% static 'accounts/images/twitter_banner.png' %}>
+        <div class="account-content-container">
+            <img class="twitter-logo" src={% static "accounts/images/twitter_logo.png" %}>
+            <h1 class="heading">Happening now</h1>
+            <h2 class="sub-heading">Join Twitter today</h2>
+            <a href="#" class="btn-signup btn-google"><img src="{% static 'accounts/images/google_icon.png' %}">Sign up with Google</a>
+            <a href="#" class="btn-signup btn-google"><img src="{% static 'accounts/images/apple_logo.png' %}">Sign up with Apple</a>
+            <a href="{% url 'accounts:register' %}" class="btn-signup">Sign up with phone or email</a>
+            <p class="terms">By singing up you agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>, including <a href="#">Cookie Use</a>.</p>
+            <p class="login-info">Already have an account? <a href="#">Log in</a></p>
+        </div>
+    </div>
+{% endblock content %}

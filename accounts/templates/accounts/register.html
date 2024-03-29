@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'accounts/css/register.css' %}">
+{% endblock style %}
+{% block title %}Register{% endblock title %}
+
+{% block content %}
+    <div class="form-container">
+        <img class="twitter-logo" src="{% static 'accounts/images/twitter_logo.png' %}">
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" id="name" placeholder="Name">
+            <input type="email" id="email" placeholder="Email">
+            <div class="form-group">
+                <label for="birth-date">Date of birth</label>
+                <p class="help-text">Facilisi sem pulvinar velit nunc, gravida scelerisque amet nibh sit. Quis bibendum ante phasellus metus, magna lacinia sed augue. Odio enim nascetur leo mauris vel eget. Pretium id ullamcorper blandit viverra dignissim eget tellus. Nibh mi massa in molestie a sit. Elit congue.</p>
+                <input type="date" id="birth-date">
+            </div>
+            <input type="submit" value="Next">
+        </form>
+    </div>
+{% endblock content %}
