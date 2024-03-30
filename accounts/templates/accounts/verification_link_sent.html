@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" href="{% static 'accounts/css/verification_link_sent.css' %}">
+{% endblock style %}
+{% block title %}Register{% endblock title %}
+
+{% block content %}
+    <div class="text-container">
+        <img class="twitter-logo" src="{% static 'accounts/images/twitter_logo.png' %}" alt="twitter-logo">
+        <h3>Verification has been sent.<br>Check the email with the link sent to you and click the link to verify your email.</h3>
+    </div>
+{% endblock content %}
